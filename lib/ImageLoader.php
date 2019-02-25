@@ -35,7 +35,7 @@ class ImageLoader extends MyPDO
 
     public function setNextPage($nextPage) {
 
-      $this->nextPage=$nextPage;
+        $this->nextPage=$nextPage;
 
     }
 
@@ -45,16 +45,16 @@ class ImageLoader extends MyPDO
 
     public function settingPages() {
 
-      if($this->nextPage){
+        if($this->nextPage){
 
         $this->ini = $this->nextPage + 1;
 
-      }else{
+        }else{
 
         $this->nextPage = 0;
         $this->ini = $this->nextPage;
 
-      }
+        }
 
     }
 
@@ -64,12 +64,12 @@ class ImageLoader extends MyPDO
 
     public function getLines() {
 
-      $pdo = $this->getPDO();
-      $statement = $pdo->prepare("SELECT COUNT(*) FROM `OOPGalleryTable`");
-      $statement->execute();
-      $lines = $statement->fetchAll(PDO::FETCH_ASSOC);
+        $pdo = $this->getPDO();
+        $statement = $pdo->prepare("SELECT COUNT(*) FROM `OOPGalleryTable`");
+        $statement->execute();
+        $lines = $statement->fetchAll(PDO::FETCH_ASSOC);
     
-      return $lines[0];
+        return $lines[0];
 
     }
 
@@ -79,10 +79,10 @@ class ImageLoader extends MyPDO
 
     public function countLines() {
 
-      $lines = $this->getLines();
-      $count = $lines["COUNT(*)"]/$GLOBALS["pagenum"];
+        $lines = $this->getLines();
+        $count = $lines["COUNT(*)"]/$GLOBALS["pagenum"];
 
-      return $count;
+        return $count;
 
     }
 
@@ -92,7 +92,7 @@ class ImageLoader extends MyPDO
 
     public function getIni() {
 
-      return $this->ini;
+        return $this->ini;
       
     }
 
@@ -102,7 +102,7 @@ class ImageLoader extends MyPDO
 
     public function getNextPage() {
 
-      return $this->nextPage;
+        return $this->nextPage;
       
     }
 
@@ -112,7 +112,7 @@ class ImageLoader extends MyPDO
 
     public function setErrorMsg($errorMsg) {
 
-      $this->errorMsg=$errorMsg;
+        $this->errorMsg=$errorMsg;
 
     }
 
@@ -122,9 +122,9 @@ class ImageLoader extends MyPDO
 
     public function getErrorMsg() {
 
-      return $this->errorMsg;
+        return $this->errorMsg;
 
     }
 
-  }
+    }
 
