@@ -4,9 +4,9 @@
  * End point that deletes an Image
 */
 
-require __DIR__ . '/config.php';
+require __DIR__.'/config.php';
 
-$deleteImage=new Image(
+$deleteImage = new Image(
 
     $dbDsn,
 
@@ -18,12 +18,12 @@ $deleteImage=new Image(
 
 $deleteImage->setId($_POST["deleting"]);
 
-if ($deleteImage->deleteImage()){
+if ($deleteImage->deleteImage()) {
 
-    header("Location: ". $myhome);
+    header("Location: ".$myhome);
 
 } else {
 
-    header("Location: ". $myhome."?errormsg=delete");
+    header("Location: ".$myhome."?errormsg=delete");
 
 }

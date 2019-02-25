@@ -4,22 +4,22 @@
  * End Point that view or download based on if::else
 */
 
-    require __DIR__ . '/config.php';
+    require __DIR__.'/config.php';
 
     $downloadView = new Image($dbDsn, $dbUser, $dbPass);
     $downloadView->setId($_GET["id"]);
     $arrayD = $downloadView->getImageById();
 
-    if($_GET["download"]){
+    if ($_GET["download"]) {
         
         $downloadView->incrementDownload();
         $file_url = 'usersimgs/'.$arrayD["uploaded_image"];
         header('Content-Type: application/octet-stream');
         header("Content-Transfer-Encoding: Binary");
-        header("Content-disposition: attachment; filename=\"" . basename($file_url) . "\"");
+        header("Content-disposition: attachment; filename=\"".basename($file_url)."\"");
         readfile($file_url);
     
-    }else{
+    } else {
         
         $downloadView->incrementView();
 
@@ -37,7 +37,7 @@
 
         <div style="width: 50rem; padding-top: 10%; padding-left:5%;">
 
-            <img id="default_image" class="card-img-top" src="usersimgs/<?php echo $arrayD['uploaded_image'];?>" alt="">
+            <img id="default_image" class="card-img-top" src="usersimgs/<?php echo $arrayD['uploaded_image']; ?>" alt="">
 
         </div>
 

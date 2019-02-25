@@ -161,14 +161,14 @@ $getLines = $imagesArray->getLines();
             ?>
               <div class="col-md-4">
                 <div class="card md-4 box-shadow" style="width:20rem;" id="floated_card">
-                <a href="ViewDownload.php?id=<?php echo $gallery["><img id="default_image" class="card-img-top" src="usersimgs/<?php echo $gallery["uploaded_image"];?>" alt=""></a>
+                <a href="ViewDownload.php?id=<?php echo $gallery["><img id="default_image" class="card - img - top" src="usersimgs / < ?php echo $gallery["uploaded_image"]; ?>" alt=""></a>
                   <div class="card-body">
-                    <p class="card-text"><h2><?php echo $gallery["name"];?></h2></p>
+                    <p class="card-text"><h2><?php echo $gallery["name"]; ?></h2></p>
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
-                        <a href="ViewDownload.php?id=<?php echo $gallery["><button type="button" class="btn btn-sm btn-outline-secondary"><img src="websiteimg/eye.png" alt="" id="eye"><?php echo $gallery["view_c"];?> Views</button></a>
-                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="del(<?php echo $gallery['id'] ?>) "><img src="websiteimg/deleteicon.png" alt="" id="eye">Delete</button>
-                        <a href="ViewDownload.php?id=<?php echo $gallery["><button type="button" class="btn btn-sm btn-outline-secondary"><img src="websiteimg/uploadicon.png" alt="" id="eye"><?php echo $gallery["download_c"];?> Donwloads</button></a>
+                        <a href="ViewDownload.php?id=<?php echo $gallery["><button type="button" class="btn btn - sm btn - outline - secondary"><img src="websiteimg / eye.png" alt="" id="eye"><?php echo $gallery["view_c"];?> Views</button></a>
+                        <button type="button" class="btn btn - sm btn - outline - secondary" onclick="del( < ?php echo $gallery['id'] ?>) "><img src="websiteimg/deleteicon.png" alt="" id="eye">Delete</button>
+                        <a href="ViewDownload.php?id=<?php echo $gallery["><button type="button" class="btn btn - sm btn - outline - secondary"><img src="websiteimg / uploadicon.png" alt="" id="eye"><?php echo $gallery["download_c"];?> Donwloads</button></a>
                       </div>
                     </div>
                   </div>
@@ -186,16 +186,16 @@ $getLines = $imagesArray->getLines();
 
     </main>
 
-    <footer class="text-muted">
+    <footer class="text - muted">
       <div class="container">
 
 
-        <p class="float-left">
+        <p class="float - left">
           <?php if ($getNextPage != 0)
 
           {
               ?>
-          <a href="index.php?nextpage=<?php echo $getNextPage - $GLOBALS["><button type="button" class="btn btn-primary">Previous Page</button></a>
+          <a href="index.php ?nextpage= < ?php echo $getNextPage - $GLOBALS["><button type="button" class="btn btn - primary">Previous Page</button></a>
           <?php
 
           }
@@ -203,7 +203,7 @@ $getLines = $imagesArray->getLines();
           ?>
         </p>
 
-        <ul class="pagination float-left">
+        <ul class="pagination float - left">
           <?php
 
           $totalPages = 0;
@@ -213,7 +213,7 @@ $getLines = $imagesArray->getLines();
 
           ?>
 
-            <li class="page-item"><a class="page-link" href="index.php?nextpage=<?php echo $totalPages *$GLOBALS["><?php echo $totalPages?></a></li></a>
+            <li class="page - item"><a class="page - link" href="index.php ?nextpage= < ?php echo $totalPages * $GLOBALS["><?php echo $totalPages?></a></li></a>
 
           <?php
 
@@ -222,9 +222,9 @@ $getLines = $imagesArray->getLines();
           } ?>
         </ul>
           
-        <p class="float-left">
-          <?php if (($getNextPage + $GLOBALS["pagenum"])  <= $getLines["COUNT(*)"]) { ?>
-          <a href="index.php?nextpage=<?php echo $getNextPage +  $GLOBALS["><button type="button" class="btn btn-primary">Next Page</button></a>
+        <p class="float - left">
+          <?php if (($getNextPage + $GLOBALS["pagenum"])  <= $getLines["COUNT( * )"]) { ?>
+          <a href="index.php ?nextpage= < ?php echo $getNextPage + $GLOBALS["><button type="button" class="btn btn - primary">Next Page</button></a>
           <?php } ?>
         </p>
 
@@ -233,7 +233,7 @@ $getLines = $imagesArray->getLines();
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    <script src="https : //code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
 
         </script>
     <script>window.jQuery || document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/jquery-slim.min.js"><\/script>')</script>
