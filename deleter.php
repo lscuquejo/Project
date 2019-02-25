@@ -4,7 +4,7 @@
  * End point that deletes an Image
 */
 
-require __DIR__.'/config.php';
+require __DIR__ . '/config.php';
 
 $deleteImage=new Image(
 

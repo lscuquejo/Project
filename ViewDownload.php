@@ -4,7 +4,7 @@
  * End Point that view or download based on if::else
 */
 
-    require __DIR__.'/config.php';
+    require __DIR__ . '/config.php';
 
     $downloadView = new Image($dbDsn, $dbUser, $dbPass);
     $downloadView->setId($_GET["id"]);
