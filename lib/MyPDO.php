@@ -7,47 +7,47 @@ class MyPDO
 
 {
 
-  /**
-   * variables
-   */
+    /**
+     * variables
+     */
 
-  private $pdo;
+    private $pdo;
 
-  private $dbDsn;
+    private $dbDsn;
 
-  private $dbUser;
+    private $dbUser;
 
-  private $dbPass;
+    private $dbPass;
 
-  /**
-   * function that check upload form if its an image or the name is empty
-  */
+    /**
+     * function that check upload form if its an image or the name is empty
+     */
 
-  public function __construct($dbDsn, $dbUser, $dbPass)
-  {
+    public function __construct($dbDsn, $dbUser, $dbPass)
+    {
     $this->dbDsn = $dbDsn;
     $this->dbUser = $dbUser;
     $this->dbPass = $dbPass;
-  }
+    }
 
-  public function getImages()
-  {
+    public function getImages()
+    {
 
-      $imageData = $this->queryForImages();
+        $imageData = $this->queryForImages();
 
-      $images = array();
-      foreach ($imageData as $imageData) {
+        $images = array();
+        foreach ($imageData as $imageData) {
 
         $images[] = $this->createImageFromData($imageData);
 
-      }
+        }
 
-      return $images;
+        return $images;
 
-  }
+    }
 
-  private function createImageFromData(array $imageData)
-  {
+    private function createImageFromData(array $imageData)
+    {
     $image = new UploadedImage($imageData['name']);
     $image->setId($imageData['id']);
     $image->setWeaponPower($imageData["uploaded_image"]);
@@ -55,25 +55,25 @@ class MyPDO
     $image->setStrength($imageData["download_c"]);
 
     return $image;
-  }
+    }
 
     public function getPDO()
-  {
+    {
 
     if ($this->pdo === null){
-      $this->pdo = new PDO(
+        $this->pdo = new PDO(
         $this->dbDsn,
         $this->dbUser,
         $this->dbPass
-      );
+        );
       
-      $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     }
 
     return $this->pdo;
 
-  }
+    }
     
 }
 
